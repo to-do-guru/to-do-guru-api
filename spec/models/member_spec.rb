@@ -1,5 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Member, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe 'relationships' do
+    it { should belong_to :household }
+    it { should have_many :member_chores }
+  end
 end

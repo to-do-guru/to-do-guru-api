@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :member do
-    household { nil }
-    name { "MyString" }
+    household { create(:household) }
+    name { Faker::Name.first_name }
   end
 end

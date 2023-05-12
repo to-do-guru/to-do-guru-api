@@ -1,0 +1,37 @@
+#based this information on https://github.com/actions/starter-workflows/blob/main/ci/rubyonrails.yml
+name: Ruby on Rails CI
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:13.2
+        ports:
+          - "5432:5432" #not sure about this port
+        env:
+          POSTGRES_DB: to-do-guru-api_test
+          POSTGRES_USER: to-do-guru-api
+          POSTGRES_PASSWORD: "" #not sure if we need a password here
+    env:
+      RAILS_ENV: test
+      DATABASE_URL: "postgres://rails:password@localhost:5432/to-do-guru-api_test" #not sure if this is correct url
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@ec02537da5712d66d4d50a0f33b7eb52773b5ed1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
+      - name: Install dependencies
+        run: bundle install
+      - name: Set up database
+        run: bin/rails db:prepare
+      - name: Run tests
+        run: bundle exec rake
+

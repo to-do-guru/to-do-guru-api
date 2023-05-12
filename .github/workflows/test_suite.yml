@@ -1,37 +1,62 @@
-#based this information on https://github.com/actions/starter-workflows/blob/main/ci/rubyonrails.yml
-name: Ruby on Rails CI
-
+name: "Ruby on Rails CI"
 on:
   pull_request:
-    branches: [ main ]
-
+    branches: main
 jobs:
   test:
     runs-on: ubuntu-latest
+
     services:
       postgres:
-        image: postgres:13.2
+        image: postgres:11-alpine #13.2?
         ports:
-          - "5432:5432" #not sure about this port
+          - "5432:5432"
         env:
-          POSTGRES_DB: to-do-guru-api_test
-          POSTGRES_USER: to-do-guru-api
-          POSTGRES_PASSWORD: "" #not sure if we need a password here
+          POSTGRES_DB: rails_test
+          POSTGRES_USER: rails
+          POSTGRES_PASSWORD: password
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
     env:
       RAILS_ENV: test
-      DATABASE_URL: "postgres://rails:password@localhost:5432/to-do-guru-api_test" #not sure if this is correct url
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v3
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@ec02537da5712d66d4d50a0f33b7eb52773b5ed1
-        with:
-          ruby-version: '3.1'
-          bundler-cache: true
-      - name: Install dependencies
-        run: bundle install
-      - name: Set up database
-        run: bin/rails db:prepare
-      - name: Run tests
-        run: bundle exec rake
+      DATABASE_URL: "postgres://rails:password@localhost:5432/rails_test"
 
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install Ruby and gems
+        uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf # v1.146.0
+        with:
+          bundler-cache: true
+
+      - name: Set up database schema
+        run: bin/rails db:schema:load
+
+      - name: Run tests
+        run: bin/rake
+
+      - name: Create Coverage Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: code-coverage
+          path: coverage/
+
+  # lint:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v3
+  #     - name: Set up Ruby
+  #       uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf # v1.146.0
+  #       with:
+  #         ruby-version: 3.1.1
+  #         bundler-cache: true
+  #     - name: Install RuboCop
+  #       run: bundle install
+  #     - name: Run RuboCop
+  #       run: bundle exec rubocop -A || true

@@ -5,6 +5,10 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+Household.destroy_all
+Member.destroy_all
+Chore.destroy_all
+MemberChore.destroy_all
 
 household_smith = Household.create!(name: "The Smith's House", email: "smith@example.com")
 household_doe = Household.create!(name: "The Doe's House", email: "doe@example.com")

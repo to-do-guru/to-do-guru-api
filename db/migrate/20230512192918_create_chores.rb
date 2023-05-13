@@ -1,3 +1,4 @@
+# db/migrate/20230512192918_create_chores.rb
 class CreateChores < ActiveRecord::Migration[7.0]
   def change
     create_table :chores do |t|

@@ -1,3 +1,4 @@
+# app/models/member.rb
 class Member < ApplicationRecord
   belongs_to :household
 

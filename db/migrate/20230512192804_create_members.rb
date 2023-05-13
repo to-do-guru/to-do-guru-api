@@ -1,3 +1,4 @@
+# db/migrate/20230512192804_create_members.rb
 class CreateMembers < ActiveRecord::Migration[7.0]
   def change
     create_table :members do |t|

@@ -1,3 +1,4 @@
+# db/migrate/20230512192528_create_households.rb
 class CreateHouseholds < ActiveRecord::Migration[7.0]
   def change
     create_table :households do |t|

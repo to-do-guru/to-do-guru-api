@@ -10,8 +10,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 0) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_12_192936) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "chores", force: :cascade do |t|
+    t.bigint "household_id", null: false
+    t.string "name"
+    t.integer "duration"
+    t.integer "day", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["household_id"], name: "index_chores_on_household_id"
+  end
+
+  create_table "households", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "member_chores", force: :cascade do |t|
+    t.bigint "member_id", null: false
+    t.bigint "chore_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["chore_id"], name: "index_member_chores_on_chore_id"
+    t.index ["member_id"], name: "index_member_chores_on_member_id"
+  end
+
+  create_table "members", force: :cascade do |t|
+    t.bigint "household_id", null: false
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["household_id"], name: "index_members_on_household_id"
+  end
+
+  add_foreign_key "chores", "households"
+  add_foreign_key "member_chores", "chores"
+  add_foreign_key "member_chores", "members"
+  add_foreign_key "members", "households"
 end

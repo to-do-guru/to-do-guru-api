@@ -100,6 +100,7 @@ GEM
       i18n (>= 1.8.11, < 2)
     globalid (1.1.0)
       activesupport (>= 5.0)
+    graphql (2.0.21)
     i18n (1.13.0)
       concurrent-ruby (~> 1.0)
     io-console (0.6.0)
@@ -235,6 +236,7 @@ GEM
     zeitwerk (2.6.8)
 
 PLATFORMS
+  x86_64-darwin-21
   x86_64-darwin-22
   x86_64-linux
 
@@ -244,6 +246,7 @@ DEPENDENCIES
   debug
   factory_bot_rails
   faker
+  graphql (~> 2.0)
   pg (~> 1.1)
   pry
   puma (~> 5.0)

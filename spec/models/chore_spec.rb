@@ -4,6 +4,7 @@ RSpec.describe Chore, type: :model do
   describe "relationships" do
     it { should belong_to :household }
     it { should have_many :member_chores }
+    it { should have_many(:members).through(:member_chores) }
   end
 
   describe "validations" do

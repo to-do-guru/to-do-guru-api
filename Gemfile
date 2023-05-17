@@ -55,6 +55,7 @@ group :test do
   gem "capybara"
   gem "shoulda-matchers"
   gem "simplecov"
+  gem "rspec-graphql_matchers"
 end
 
 gem "graphql", "~> 2.0"

@@ -58,3 +58,4 @@ group :test do
 end
 
 gem "graphql", "~> 2.0"
+gem 'rack-cors'

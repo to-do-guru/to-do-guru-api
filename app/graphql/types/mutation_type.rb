@@ -6,5 +6,7 @@ module Types
     def test_field
       "Hello World"
     end
+
+    field :update_household, mutation: Mutations::UpdateHousehold
   end
 end

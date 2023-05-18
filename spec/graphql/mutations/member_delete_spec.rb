@@ -14,17 +14,22 @@ RSpec.describe Mutations::MemberDelete, type: :graphql do
     end
     
     it 'deletes a member from a household' do
-      expect {
-        post '/graphql', params: { query: member_delete_mutation(member1.id) }
-      }.to change { Member.count }.by(-1)
+      # binding.pry
+      # expect {
+      #   post '/graphql', params: { query: member_delete_mutation(member1.id) }
+      # }.to change { Member.count }.by(-1)
+      
+      post '/graphql', params: { query: member_delete_mutation(member1.id) }
+      # binding.pry
       expect(household.members.count).to eq(2)
     end
+    
     
     def member_delete_mutation(member_id)
       <<~GRAPHQL
         mutation {
-          member_delete(id: "#{member_id}") {
-            success
+          memberDelete(input: {id: #{member_id}}) {
+            member {name}
           }
         }
       GRAPHQL

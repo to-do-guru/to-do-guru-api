@@ -10,6 +10,7 @@ module Mutations
 
     def resolve(id:)
       member = ::Member.find(id)
+      binding.pry
       raise GraphQL::ExecutionError.new "Error deleting member", extensions: member.errors.to_hash unless member.destroy
 
       { member: member }

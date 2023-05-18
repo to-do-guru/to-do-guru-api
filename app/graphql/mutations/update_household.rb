@@ -10,11 +10,10 @@ module Mutations
       household = Household.find(id)
 
       household.update!(attributes)
-      
-      { household: household, errors: [] }
 
-    rescue => e
-      return { errors: [e] }
+      { household:, errors: [] }
+    rescue StandardError => e
+      { errors: [e] }
     end
   end
 end

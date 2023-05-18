@@ -1,4 +1,5 @@
 require "rails_helper"
+
 module Mutations
   RSpec.describe UpdateHousehold, type: :request do
     describe "#instance methods" do
@@ -33,6 +34,19 @@ module Mutations
           expect(household_response[:data][:updateHousehold][:household][:email]).to eq("new_email@example.com")
           expect(household_response[:data][:updateHousehold][:household][:name]).to eq("New Household Name")
           expect(household_response[:data][:updateHousehold][:errors]).to eq([])
+        end
+
+        it "returns null household object with error message when record not found" do
+          post '/graphql', params: { query: query(id: 0) }
+
+          household_response = JSON.parse(response.body, symbolize_names: true)
+
+          expect(household_response.keys).to include(:data)
+          expect(household_response[:data].keys).to include(:updateHousehold)
+          expect(household_response[:data][:updateHousehold].keys).to include(:household, :errors)
+
+          expect(household_response[:data][:updateHousehold][:household]).to eq(nil)
+          expect(household_response[:data][:updateHousehold][:errors]).to eq(["Record Not Found"])
         end
       end  
 

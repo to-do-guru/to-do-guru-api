@@ -6,15 +6,35 @@ module Mutations
     
     argument :id, ID, required: true
 
-    field :member, Types::MemberType, null: true
+    field :member, Types::MemberType, null: false
 
 
+#     def resolve(id:)
+#       member = Member.find(id)
+# 
+# 
+#       if member.present?
+#         member.destroy
+#       else
+#         member: nil, 
+#         errors: member.errors.full_messages
+#       end
+# binding.pry
+#       # raise GraphQL::ExecutionError.new "Error deleting member", extensions: member.errors.to_hash unless member.destroy
+#       # 
+#       # { member: member }
+#     end
+    
     def resolve(id:)
       member = Member.find(id)
-
+    
       raise GraphQL::ExecutionError.new "Error deleting member", extensions: member.errors.to_hash unless member.destroy
-      
+    
       { member: member }
     end
   end
 end
+
+
+# member: nil, 
+# errors: member.errors.full_messages

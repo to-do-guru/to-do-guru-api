@@ -9,11 +9,12 @@ module Mutations
     def resolve(id:, **attributes)
       household = Household.find(id)
 
-      if household.update(attributes)
-        { household: household, errors: [] }
-      else
-        { household: nil, errors: household.errors.full_messages }
-      end
+      household.update!(attributes)
+      
+      { household: household, errors: [] }
+
+    rescue => e
+      return { errors: [e] }
     end
   end
 end

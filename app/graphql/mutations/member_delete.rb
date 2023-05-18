@@ -3,16 +3,18 @@
 module Mutations
   class MemberDelete < BaseMutation
     description "Deletes a member by ID"
+    
+    argument :id, ID, required: true
 
     field :member, Types::MemberType, null: false
 
-    argument :id, ID, required: true
 
-    def resolve(id:)
+    def resolve(id:, **attributes)
       member = ::Member.find(id)
-      binding.pry
+      
+      # binding.pry
       raise GraphQL::ExecutionError.new "Error deleting member", extensions: member.errors.to_hash unless member.destroy
-
+      
       { member: member }
     end
   end

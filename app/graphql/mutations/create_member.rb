@@ -6,12 +6,11 @@ class Mutations::CreateMember < Mutations::BaseMutation
   field :errors, [String], null: false
 
   def resolve(name:, household_id:)
-    member = Member.new(name: name, household_id: household_id)
+    member = Member.new(name:, household_id:)
 
     member.save!
-      { member: member, errors: [] }
-
-    rescue => e
-      return { errors: [e] }
+    { member:, errors: [] }
+    rescue StandardError => e
+      { errors: [e] }
   end
 end

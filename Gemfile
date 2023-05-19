@@ -43,7 +43,7 @@ group :development, :test do
   gem "faker"
   gem "pry"
   gem "rspec-rails"
-  gem 'rubocop-rails', require: false
+  gem "rubocop-rails", require: false
 end
 
 group :development do
@@ -58,4 +58,4 @@ group :test do
 end
 
 gem "graphql", "~> 2.0"
-gem 'rack-cors'
+gem "rack-cors"

@@ -1,5 +1,7 @@
 # ./app/models/chore.rb
 class Chore < ApplicationRecord
+  validates_presence_of :name, :duration, :day
+  validates_numericality_of :duration
   belongs_to :household
 
   has_many :member_chores, dependent: :destroy

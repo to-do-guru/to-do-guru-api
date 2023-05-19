@@ -7,7 +7,7 @@ module Types
     end
 
     def household(email:)
-      Household.find_by(email: email)
+      Household.find_by(email:)
     end
   end
 end

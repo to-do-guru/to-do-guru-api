@@ -16,7 +16,7 @@ module Types
     field :thursday, [Types::ChoreType], null: true
     field :friday, [Types::ChoreType], null: true
     field :saturday, [Types::ChoreType], null: true
-    
+
     def sunday
       sunday = object.chores.where(day: "Sunday")
       format_day(sunday)
@@ -53,11 +53,9 @@ module Types
     end
 
     def format_day(day)
-      if day.empty?
-        return nil
-      else
-        return day
-      end
+      return nil if day.empty?
+
+      day
     end
-  end  
+  end
 end

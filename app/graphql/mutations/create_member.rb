@@ -10,7 +10,7 @@ class Mutations::CreateMember < Mutations::BaseMutation
 
     member.save!
     { member:, errors: [] }
-    rescue StandardError => e
-      { errors: [e] }
+  rescue StandardError => e
+    { errors: [e] }
   end
 end

@@ -1,4 +1,4 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe Chore, type: :model do
   describe "relationships" do
@@ -8,6 +8,9 @@ RSpec.describe Chore, type: :model do
   end
 
   describe "validations" do
-    it { should define_enum_for(:day).with_values(['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']) }
+    it {
+      should define_enum_for(:day).with_values(["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday",
+                                                "Saturday"])
+    }
   end
 end

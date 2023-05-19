@@ -16,7 +16,7 @@ module Types
     end
 
     def assigned_member
-      object.members.pluck(:name).first
+      object.members.pick(:name)
     end
   end
 end

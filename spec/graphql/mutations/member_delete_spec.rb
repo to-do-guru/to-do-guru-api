@@ -25,27 +25,19 @@ RSpec.describe Mutations::MemberDelete, type: :graphql do
     
     describe 'sad path testing' do
       it 'does not delete a member with an invalid ID' do
-        something = post '/graphql', params: { query: query(id: 120) }
-        
-        binding.pry
-        # response = JSON.parse(response.body, symbolize_names:)
-        # expect {
-        #   ToDoGuruApiSchema.execute(query(id:0))
-        # }.to eq(4)
-        binding.pry
-        
-        expect {
-          post '/graphql', params: { query: query(0) }
-        }.to raise (error of some kind)
-        
+        # Initial count is 3, as expected
         expect(household.members.count).to eq(3)
-        # 
-        # #  1) Mutations::MemberDelete#resolve does not delete a member with an invalid ID
-        #  # Failure/Error: member = Member.find(id)
-        #  # 
-        #  # ActiveRecord::RecordNotFound:
-        #  #   Couldn't find Member with 'id'=0
-        #  # # ./app/graphql/mutations/member_delete.rb:16:in `resolve'
+        
+        post '/graphql', params: { query: query(0) }
+
+        expect(response.status).to eq(200)  # Check that the request was successful
+
+        # Assert that the member count remains the same because there was no member to destroy
+        expect(household.members.count).to eq(3)
+
+        json_response = JSON.parse(response.body, symbolize_names: true)
+        
+        expect(json_response[:data][:memberDelete][:member]).to be_nil
       end
     end
     

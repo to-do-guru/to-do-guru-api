@@ -38,6 +38,7 @@ describe "getHousehold query" do
       expect(result.dig("data", "household", "thursday")).to be nil
       expect(result.dig("data", "household", "friday")).to be nil
       expect(result.dig("data", "household", "saturday")).to be nil
+      expect(result.dig("data", "household", "errors")).to be nil
     end
 
     it "returns an empty array if there are no members for the household" do

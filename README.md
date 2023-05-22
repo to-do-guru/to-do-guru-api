@@ -22,8 +22,6 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 
@@ -211,7 +209,13 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
   <img src="https://avatars.githubusercontent.com/u/116456652?v=4" alt="Profile" width="80" height="80">
   <p align="center">
     Adam Bailey<br>
-    <a href="https://github.com/Aj-bailey">Github: Aj-bailey</a>
+  </p>
+  <p>
+  
+  [![GitHub][github-shield]][github-adam]
+  
+  [![LinkedIn][linkedin-shield]][linkedin-adam]
+  
   </p>
 </div>
 
@@ -220,34 +224,55 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
   <img src="https://avatars.githubusercontent.com/u/71752551?v=4" alt="Profile" width="80" height="80">
   <p align="center">
     Brian Hayes<br>
-    <a href="https://github.com/bphayes">Github: bphayes</a>
+  </p>
+  <p>
+  
+  [![GitHub][github-shield]][github-brian]
+  
+  [![LinkedIn][linkedin-shield]][linkedin-brian]
+  
   </p>
 </div>
+
 <div align="center">
   <img src="https://avatars.githubusercontent.com/u/114951691?v=4" alt="Profile" width="80" height="80">
   <p align="center">
     Jasmine Hamou<br>
-    <a href="https://github.com/hamouj">Github: hamouj</a>
+  </p>
+  <p>
+  
+  [![GitHub][github-shield]][github-jasmine]
+  
+  [![LinkedIn][linkedin-shield]][linkedin-jasmine]
+  
   </p>
 </div>
+
 <div align="center">
   <img src="https://avatars.githubusercontent.com/u/112577589?v=4" alt="Profile" width="80" height="80">
   <p align="center">
     Meredith Trevino<br>
-    <a href="https://github.com/MAtrevino">Github: MAtrevino</a>
+  </p>
+  <p>
+  
+  [![GitHub][github-shield]][github-meredith]
+  
+  [![LinkedIn][linkedin-shield]][linkedin-meredith]
+  
   </p>
 </div>
+
 <div align="center">
   <img src="https://avatars.githubusercontent.com/u/108768349?v=4" alt="Profile" width="80" height="80">
   <p align="center">
     Max MacGillivray<br>
-    <a href="https://github.com/MoxieMax">Github: MoxieMax</a>
   </p>
   <p>
+  
+  [![GitHub][github-shield]][github-max]
+    
   [![LinkedIn][linkedin-shield]][linkedin-max]
-  </p>
-  <p>
-  [![GitHub][github-badge]][github-max]
+  
   </p>
 </div>
 
@@ -284,19 +309,19 @@ Use this space to list resources you find helpful and would like to give credit 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/to-do-guru/to-do-guru-api.svg?style=for-the-badge
 [contributors-url]: https://github.com/to-do-guru/to-do-guru-api/graphs/contributors
 
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-READMEs-Template.svg?style=for-the-badge
 [forks-url]: https://github.com/to-do-guru/to-do-guru-api/forks
 
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/to-do-guru/to-do-guru-api.svg?style=for-the-badge
 [stars-url]: https://github.com/to-do-guru/to-do-guru-api/stargazers
 
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/to-do-guru/to-do-guru-api.svg?style=for-the-badge
 [issues-url]: https://github.com/to-do-guru/to-do-guru-api/issues
 
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/to-do-guru/to-do-guru-api.svg?style=for-the-badge
 [license-url]: https://github.com/to-do-guru/to-do-guru-api/blob/master/LICENSE.txt
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
@@ -308,7 +333,7 @@ Use this space to list resources you find helpful and would like to give credit 
 
 [product-screenshot]: images/screenshot.png
 
-[github-badge]: https://img.shields.io/badge/GitHub-181717.svg?style=for-the-badge&logo=GitHub&logoColor=white
+[github-shield]: https://img.shields.io/badge/GitHub-181717.svg?style=for-the-badge&logo=GitHub&logoColor=white
 [github-adam]: https://github.com/aj-bailey
 [github-brian]: href="https://github.com/bphayes
 [github-jasmine]: https://github.com/hamouj

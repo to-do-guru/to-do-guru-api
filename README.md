@@ -31,6 +31,7 @@
   <a href="https://github.com/othneildrew/Best-README-Template">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
+  <!-- Do we have a logo? -->
 
   <h3 align="center">Best-README-Template</h3>
 
@@ -83,7 +84,17 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+Have you ever felt like your household chores aren't divided evenly? 
+
+Like you're carrying the weight of the entire job on your shoulders? 
+
+Like dividing your housework is a chore by itself?
+
+So did we!
+ 
+So we created To Do Guru, the app that will divide your chores as evenly as possible across all members of your household.
+
+Our goal is to make sure that one person doesn't shoulder the whole burden, including the planning and scheduling.
 
 Here's why:
 * Your time should be focused on creating something amazing. A project that solves a problem and helps others
@@ -339,6 +350,7 @@ Use this space to list resources you find helpful and would like to give credit 
 [github-jasmine]: https://github.com/hamouj
 [github-meredith]: https://github.com/MAtrevino
 [github-max]: https://github.com/MoxieMax
+[github-khoa]: https://github.com/omegaeye-he
 
 [Rails]: https://img.shields.io/badge/-Ruby%20on%20Rails-CC0000?logo=ruby-on-rails&logoColor=white&style=for-the-badge
 [Rails-url]: https://rubyonrails.org 

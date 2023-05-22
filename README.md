@@ -46,7 +46,7 @@
     ·
     <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/to-do-guru/to-do-guru-api/issues">Request Feature</a>
   </p>
 </div>
 
@@ -104,14 +104,9 @@ Use the `BLANK_README.md` to get started.
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* [![Ruby on Rails][Rails]][Rails-url]
+* [![Ruby Gems][Ruby-gems]][Ruby-gems-url]
+* [![GraphQL][graphql-badge]][graphql-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -138,11 +133,11 @@ _Below is an example of how you can instruct your audience on installing and set
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone git@github.com:to-do-guru/to-do-guru-api.git
    ```
-3. Install NPM packages
+3. Install gems
    ```sh
-   npm install
+   bundle install
    ```
 4. Enter your API in `config.js`
    ```js
@@ -175,7 +170,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
     - [ ] Chinese
     - [ ] Spanish
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/to-do-guru/to-do-guru-api/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -217,8 +212,10 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
   <p align="center">
     Adam Bailey<br>
     <a href="https://github.com/Aj-bailey">Github: Aj-bailey</a>
+    <a href="https://www.linkedin.com/in/brewerdeveloper/">Github: Aj-bailey</a>
   </p>
 </div>
+
 <div align="center">
   <img src="https://avatars.githubusercontent.com/u/71752551?v=4" alt="Profile" width="80" height="80">
   <p align="center">
@@ -226,6 +223,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
     <a href="https://github.com/bphayes">Github: bphayes</a>
   </p>
 </div>
+
 <div align="center">
   <img src="https://avatars.githubusercontent.com/u/114951691?v=4" alt="Profile" width="80" height="80">
   <p align="center">
@@ -233,6 +231,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
     <a href="https://github.com/hamouj">Github: hamouj</a>
   </p>
 </div>
+
 <div align="center">
   <img src="https://avatars.githubusercontent.com/u/112577589?v=4" alt="Profile" width="80" height="80">
   <p align="center">
@@ -240,6 +239,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
     <a href="https://github.com/MAtrevino">Github: MAtrevino</a>
   </p>
 </div>
+
 <div align="center">
   <img src="https://avatars.githubusercontent.com/u/108768349?v=4" alt="Profile" width="80" height="80">
   <p align="center">
@@ -248,10 +248,12 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
   </p>
 </div>
 
+* [![linkedin][linkedin-shield]][linkedin-url]
+
 Project Links: <br> 
-[Organization Link](https://github.com/orgs/TrailsNBrews/repositories) <br>
-[Backend Link](https://github.com/TrailsNbrews/trails_n_brews_BE) <br>
-[Frontend Link](https://github.com/TrailsNBrews/Trails-N-Brews_FE)
+[Organization Link](https://github.com/to-do-guru) <br>
+[Backend Link](https://github.com/to-do-guru/to-do-guru-api) <br>
+[Frontend Link](https://github.com/to-do-guru/to-do-guru-ui)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -281,18 +283,35 @@ Use this space to list resources you find helpful and would like to give credit 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
+[contributors-url]: https://github.com/to-do-guru/to-do-guru-api/graphs/contributors
+
 [forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
+[forks-url]: https://github.com/to-do-guru/to-do-guru-api/forks
+
 [stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
+[stars-url]: https://github.com/to-do-guru/to-do-guru-api/stargazers
+
 [issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
+[issues-url]: https://github.com/to-do-guru/to-do-guru-api/issues
+
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[license-url]: https://github.com/to-do-guru/to-do-guru-api/blob/master/LICENSE.txt
+
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
+[linkedin-adam]: https://www.linkedin.com/in/brewerdeveloper/
+[linkedin-brian]: https://www.linkedin.com/in/brian-hayes-363812204/
+[linkedin-jasmine]: https://www.linkedin.com/in/jasmine-hamou/
+[linkedin-meredith]: https://www.linkedin.com/in/meredith-trevino/
+[linkedin-max]: https://www.linkedin.com/in/max-macgillivray/
+
 [product-screenshot]: images/screenshot.png
+
+[github-badge]: https://img.shields.io/badge/GitHub-181717.svg?style=for-the-badge&logo=GitHub&logoColor=white
+[github-adam]: https://github.com/aj-bailey
+[github-brian]: href="https://github.com/bphayes
+[github-jasmine]: https://github.com/hamouj
+[github-meredith]: https://github.com/MAtrevino
+[github-max]: https://github.com/MoxieMax
 
 [Rails]: https://img.shields.io/badge/-Ruby%20on%20Rails-CC0000?logo=ruby-on-rails&logoColor=white&style=for-the-badge
 [Rails-url]: https://rubyonrails.org 

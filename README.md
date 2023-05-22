@@ -212,9 +212,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
   <p align="center">
     Adam Bailey<br>
     <a href="https://github.com/Aj-bailey">Github: Aj-bailey</a>
-    <a href="https://www.linkedin.com/in/brewerdeveloper/">Github: Aj-bailey</a>
   </p>
 </div>
+
 
 <div align="center">
   <img src="https://avatars.githubusercontent.com/u/71752551?v=4" alt="Profile" width="80" height="80">
@@ -223,7 +223,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
     <a href="https://github.com/bphayes">Github: bphayes</a>
   </p>
 </div>
-
 <div align="center">
   <img src="https://avatars.githubusercontent.com/u/114951691?v=4" alt="Profile" width="80" height="80">
   <p align="center">
@@ -231,7 +230,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
     <a href="https://github.com/hamouj">Github: hamouj</a>
   </p>
 </div>
-
 <div align="center">
   <img src="https://avatars.githubusercontent.com/u/112577589?v=4" alt="Profile" width="80" height="80">
   <p align="center">
@@ -239,16 +237,20 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
     <a href="https://github.com/MAtrevino">Github: MAtrevino</a>
   </p>
 </div>
-
 <div align="center">
   <img src="https://avatars.githubusercontent.com/u/108768349?v=4" alt="Profile" width="80" height="80">
   <p align="center">
     Max MacGillivray<br>
     <a href="https://github.com/MoxieMax">Github: MoxieMax</a>
   </p>
+  <p>
+  [![LinkedIn][linkedin-shield]][linkedin-max]
+  </p>
+  <p>
+  [![GitHub][github-badge]][github-max]
+  </p>
 </div>
 
-* [![linkedin][linkedin-shield]][linkedin-url]
 
 Project Links: <br> 
 [Organization Link](https://github.com/to-do-guru) <br>

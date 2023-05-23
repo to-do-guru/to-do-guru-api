@@ -30,20 +30,14 @@
 <br />
 <div align="center">
 
-    <!-- LOGO GOES HERE -->
-  <!-- Do we have a logo? -->
-
   <h3 align="center">To Do Guru</h3>
+  
+      <!-- LOGO GOES HERE -->
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/to-do-guru/to-do-guru-api/issues">Report Bug</a>
     ·
     <a href="https://github.com/to-do-guru/to-do-guru-api/issues">Request Feature</a>
   </p>
@@ -68,7 +62,7 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#usage">API Contract</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -82,7 +76,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][logo-green-small]]
+<!-- WELCOME SCREENSHOT GOES HERE -->
 
 Have you ever felt like your household chores aren't divided evenly? 
 
@@ -142,10 +136,12 @@ This section should list any major frameworks/libraries used to bootstrap your p
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<!-- USAGE EXAMPLES -->
-## Usage
+<!-- API CONTRACT -->
+## API Contract
 
-<!-- add a try it now section with the FE repo? -->
+[To Do Guru API Contract](https://gist.github.com/hamouj/c70f384ddce446cca675367dbbc5a6d2)
+
+<!-- add a try it now section with the FE SITE? -->
 
 ## getHousehold Query
 
@@ -523,7 +519,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTRIBUTORS -->
 
 ## Contributors
-<h2 id="contact">Contributors</h2>
 
 | <img alt="Adam Bailey" width="75" src="https://avatars.githubusercontent.com/u/116456652?v=4"/> | <img alt="Jasmine Hamou" width="75" src="https://avatars.githubusercontent.com/u/114951691?v=4"/> | <img alt="Brian Hayes" width="75" src="https://avatars.githubusercontent.com/u/71752551?v=4"/> | <img alt="Meredith Trevino" width="75" src="https://avatars.githubusercontent.com/u/112577589?v=4"/> | <img alt="Max MacGillivray" width="75" src="https://avatars.githubusercontent.com/u/108768349?v=4"/> | <img alt="Khoa Nguyen" width="75" src="https://media.licdn.com/dms/image/C4E03AQHMrMCsQolblQ/profile-displayphoto-shrink_800_800/0/1620508068267?e=1690416000&v=beta&t=Ej9xKJpBKJ214TQX88tBrHvU7Ew8aciWZRvT8KMWhZA"/> |
 | ------------------ | ------------ | -------------- | ----------- | -------------- | ----------- |
@@ -536,7 +531,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 Project Links: <br> 
 [Organization Link](https://github.com/to-do-guru) <br>
 [Backend Link](https://github.com/to-do-guru/to-do-guru-api) <br>
-[Frontend Link](https://github.com/to-do-guru/to-do-guru-ui)
+[Frontend Link](https://github.com/to-do-guru/to-do-guru-ui)<br>
+
+[Project Website](https://to-do-guru-ui.vercel.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -545,18 +542,18 @@ Project Links: <br>
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
+These are some of the resources we used for the project and the README.
 
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
+#### Project Resources
+* 
+
+#### ReadMe Resources
+* [README Template](https://github.com/othneildrew/Best-README-Template)
+
 * [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
 
 * [GitHub Badges](https://home.aveek.io/GitHub-Profile-Badges/)
 
-* [Font Awesome](https://fontawesome.com)
 * [React Icons](https://react-icons.github.io/react-icons/search)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -568,7 +565,7 @@ Use this space to list resources you find helpful and would like to give credit 
 [contributors-shield]: https://img.shields.io/github/contributors/to-do-guru/to-do-guru-api.svg?style=for-the-badge
 [contributors-url]: https://github.com/to-do-guru/to-do-guru-api/graphs/contributors
 
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-READMEs-Template.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/to-do-guru/to-do-guru-api.svg?style=for-the-badge
 [forks-url]: https://github.com/to-do-guru/to-do-guru-api/forks
 
 [stars-shield]: https://img.shields.io/github/stars/to-do-guru/to-do-guru-api.svg?style=for-the-badge

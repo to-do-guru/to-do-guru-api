@@ -17,6 +17,8 @@ module Types
     field :friday, [Types::ChoreType], null: true
     field :saturday, [Types::ChoreType], null: true
 
+    field :errors, [String]
+
     def sunday
       sunday = object.chores.where(day: "Sunday")
       format_day(sunday)

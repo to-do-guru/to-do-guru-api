@@ -94,16 +94,7 @@ So did we!
  
 So we created To Do Guru, the app that will divide your chores as evenly as possible across all members of your household.
 
-Our goal is to make sure that one person doesn't shoulder the whole burden, including the planning and scheduling.
-
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
+Our goal is to make sure that one person doesn't shoulder the whole burden, and that includes the planning and scheduling.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -129,29 +120,29 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+* Ruby 3.1.1
+* Rails 7.0.4.3
 
 ### Installation
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone git@github.com:to-do-guru/to-do-guru-api.git
-   ```
-3. Install gems
-   ```sh
-   bundle install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+1. Clone the repo
+    ```sh
+    git clone git@github.com:to-do-guru/to-do-guru-api.git
+    ```
+1. Install gems
+    ```sh
+    bundle install
+    ```
+1. Set up the database
+    ```sh
+    rails db:{create,migrate,seed}
+    ```
+1. Run the RSpec Tests
+    ```sh
+    bundle exec rspec
+    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -159,6 +150,302 @@ _Below is an example of how you can instruct your audience on installing and set
 
 <!-- USAGE EXAMPLES -->
 ## Usage
+
+<!-- add a try it now section with the FE repo -->
+
+## getHousehold Query
+
+* Receives the request for a specified household and returns the household information.
+
+**Request**
+
+```sh
+query getHousehold($email: String!) {
+    household (email: $email) {
+        id
+        name
+        members {
+            id
+            name
+        }
+        sunday {
+            choreName
+            assignedMember
+            duration
+        }
+        monday {
+            choreName
+            assignedMember
+            duration
+        }
+        tuesday {
+            choreName
+            assignedMember
+            duration
+        }
+        wednesday {
+            choreName
+            assignedMember
+            duration
+        }
+        thursday {
+            choreName
+            assignedMember
+            duration
+        }
+        friday {
+            choreName
+            assignedMember
+            duration
+        }
+        saturday {
+            choreName
+            assignedMember
+            duration
+        }
+        errors
+    }
+}
+```
+
+**GraphQL Variable**
+```
+{
+    "email": "smith@example.com"
+}
+```
+
+**Response**
+```
+{
+    "data": {
+        "household": {
+            "id": "1",
+            "name": "The Smith's House",
+            "members": [
+                {
+                    "id": "1",
+                    "name": "Will"
+                },
+                {
+                    "id": "2",
+                    "name": "Liz"
+                },
+                {
+                    "id": "3",
+                    "name": "Alec"
+                }
+            ],
+            "sunday": null,
+            "monday": [
+                {
+                    "choreName": "Clean Bathroom",
+                    "assignedMember": "Will",
+                    "duration": 45
+                }
+            ],
+            "tuesday": [
+                {
+                    "choreName": "Mow",
+                    "assignedMember": "Alec",
+                    "duration": 30
+                }
+            ],
+            "wednesday": [
+                {
+                    "choreName": "Clean Dishes",
+                    "assignedMember": "Liz",
+                    "duration": 15
+                },
+                {
+                    "choreName": "Laundry",
+                    "assignedMember": "Will",
+                    "duration": 60
+                },
+                {
+                    "choreName": "Vacuum",
+                    "assignedMember": "Liz",
+                    "duration": 45
+                }
+            ],
+            "thursday": [
+                {
+                    "choreName": "Clean Dishes",
+                    "assignedMember": "Alec",
+                    "duration": 15
+                }
+            ],
+            "friday": [
+                {
+                    "choreName": "Clean Dishes",
+                    "assignedMember": "Alec",
+                    "duration": 15
+                },
+                {
+                    "choreName": "Sweep",
+                    "assignedMember": "Liz",
+                    "duration": 60
+                }
+            ],
+            "saturday": [
+                {
+                    "choreName": "Vacuum",
+                    "assignedMember": "Alec",
+                    "duration": 45
+                }
+            ],
+            "errors": []
+        }
+    }
+}
+```
+
+## updateHousehold Mutation
+
+* Allows a household's information to be updated
+
+**Request**
+```
+mutation {
+  updateHousehold(input: {
+      id: 1
+    })
+  {
+    household {
+      id
+      name
+      email
+      }
+     errors
+   }
+}
+ ```
+ 
+ **Response**
+ ```
+ {
+    "data": {
+        "updateHousehold": {
+            "household": {
+                "id": "1",
+                "name": "The Smith's House",
+                "email": "smith@example.com"
+            },
+            "errors": []
+        }
+    }
+}
+```
+
+## createMember Mutation
+
+* Allows the a houshold member to be created
+
+**Request**
+```
+mutation {
+  createMember(input: {
+    name: "Coolio"
+    householdId: "1"
+    }) 
+    {
+      member {
+        id
+        name
+        }
+      errors
+    }
+}
+```
+
+**Response**
+```
+{
+    "data": {
+        "createMember": {
+            "member": {
+                "id": "14",
+                "name": "Coolio"
+            },
+            "errors": []
+        }
+    }
+}
+```
+
+## memberDelete Mutation
+
+* Allows a household member to be deleted
+
+**Request**
+```
+mutation {
+    memberDelete(input: {
+      id: 1 
+      }) 
+      {
+      member {
+        name
+        }
+      errors
+     }
+}
+```
+
+**Response**
+```
+{
+    "data": {
+        "memberDelete": {
+            "member": {
+                "name": "Will"
+            },
+            "errors": []
+        }
+    }
+}
+```
+
+## createChore Mutation
+
+* Allows a chore to be created
+
+**Request**
+```
+mutation {
+  createChore(input: {
+    householdId: 2
+    name: "Wash them clothes"
+    duration: 30
+    day: ["Thursday", "Tuesday"]
+    })
+    {
+    chores {
+      choreName
+      }
+    errors
+   }
+}
+```
+
+**Response**
+```
+{
+    "data": {
+        "createChore": {
+            "chores": [
+                {
+                    "choreName": "Wash them clothes"
+                },
+                {
+                    "choreName": "Wash them clothes"
+                }
+            ],
+            "errors": []
+        }
+    }
+}
+```
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 

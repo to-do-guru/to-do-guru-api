@@ -296,7 +296,7 @@ query getHousehold($email: String!) {
 
 ## updateHousehold Mutation
 
-* Allows a household's information to be updated
+* Updates the information about a household
 
 **Request**
 ```
@@ -333,7 +333,7 @@ mutation {
 
 ## createMember Mutation
 
-* Allows the a houshold member to be created
+* Adds a member to a household
 
 **Request**
 ```
@@ -369,7 +369,7 @@ mutation {
 
 ## memberDelete Mutation
 
-* Allows a household member to be deleted
+* Deletes a member of the household
 
 **Request**
 ```
@@ -402,7 +402,7 @@ mutation {
 
 ## createChore Mutation
 
-* Allows a chore to be created
+* Creates a chore
 
 **Request**
 ```
@@ -441,6 +441,38 @@ mutation {
 }
 ```
 
+## randomizeChores Mutation
+
+* Randomly assigns chores to members
+
+**Request**
+```
+mutation{
+    randomizeChores(input:{
+        id: 3
+    })
+    {
+        household{
+            id
+        }
+        errors
+    }
+}
+```
+
+**Response**
+```
+{
+    "data": {
+        "randomizeChores": {
+            "household": {
+                "id": "3"
+            },
+            "errors": []
+        }
+    }
+}
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -5,4 +5,5 @@ class Member < ApplicationRecord
   validates :name, presence: true
 
   has_many :member_chores, dependent: :destroy
+  has_many :chores, through: :member_chores
 end

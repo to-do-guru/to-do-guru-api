@@ -3,27 +3,58 @@ class Household < ApplicationRecord
   has_many :members, dependent: :destroy
   has_many :chores, dependent: :destroy
 
+  has_many :member_chores, through: :members
+
   def randomize_chores
-    chores = self.chores.select(:id, :duration)
-    # num_chores = chores.size
-    total_duration = self.chores.sum(:duration)
-    members = self.members
-    # num_members = members.size
+    destroy_household_member_chores
 
-    average_duration_per_member = total_duration.to_f / members.size
+    randomized_chores = chores.select(:id, :name, :duration).order("RANDOM()").to_a
+    randomized_members = members.order("RANDOM()").to_a
 
-    assignments = {}
-    accumulated_durations = Hash.new(0)
+    sorted_assigned_chores = {}
 
-    chores.each do |chore|
-      members.each do |member|
-        if accumulated_durations[member] + chore[:duration] <= average_duration_per_member
-          assignments[chore.id] = member
-          accumulated_durations[member] += chore[:duration]
-          break
-        end
+    randomized_members.each do |member|
+      sorted_assigned_chores[member.id] = []
+    end
+
+    until randomized_chores.empty?
+      sorted_assigned_chores = sort_member_chores_by_total_duration(sorted_assigned_chores)
+
+      sorted_assigned_chores.each do |assigned_chores|
+        next unless member_total_chore_duration(assigned_chores) < average_member_chore_duration
+
+        assigned_chores[1] << randomized_chores.shift
+        assigned_chores[1].compact!
+        break if member_total_chore_duration(assigned_chores) < average_member_chore_duration
       end
     end
-   require 'pry'; binding.pry
+
+    create_member_chore_records(sorted_assigned_chores)
+  end
+
+  private
+
+  def average_member_chore_duration
+    chores.sum { |chore| chore.duration }.to_f / members.count
+  end
+
+  def member_total_chore_duration(chores)
+    chores[1].sum { |chore| chore.duration }
+  end
+
+  def sort_member_chores_by_total_duration(chores)
+    chores.sort_by { |_member, chores| chores.sum { |chore| chore.duration } }
+  end
+
+  def create_member_chore_records(assigned_chores)
+    assigned_chores.each do |member_chores|
+      member_chores[1].each do |member_chore|
+        MemberChore.create!(member_id: member_chores[0], chore_id: member_chore.id)
+      end
+    end
+  end
+
+  def destroy_household_member_chores
+    member_chores.each { |member_chore| member_chore.destroy }
   end
 end

@@ -4,6 +4,7 @@ RSpec.describe Household, type: :model do
   describe "relationships" do
     it { should have_many :chores }
     it { should have_many :members }
+    it { should have_many(:member_chores).through(:members) }
   end
 
   context "instance methods" do

@@ -22,6 +22,7 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
+[![License][license-shield]][license-url]
 
 
 
@@ -82,7 +83,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][logo-green-small]]
 
 Have you ever felt like your household chores aren't divided evenly? 
 
@@ -579,6 +580,13 @@ Use this space to list resources you find helpful and would like to give credit 
 
 [license-shield]: https://img.shields.io/github/license/to-do-guru/to-do-guru-api.svg?style=for-the-badge
 [license-url]: https://github.com/to-do-guru/to-do-guru-api/blob/master/LICENSE.txt
+
+[logo-green-big]: /readme/images/logo-green.png
+[logo-green-small]: /readme/images/tdg-green.png
+
+[logo-pink-big]: /readme/images/logo-pink.png
+[logo-pink-small]: /readme/images/tdg-pink.png
+
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-adam]: https://www.linkedin.com/in/brewerdeveloper/

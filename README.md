@@ -63,7 +63,7 @@
       </ul>
     </li>
     <li><a href="#usage">API Contract</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#roadmap">Issues</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contributors">Contributors</a></li>
@@ -474,14 +474,45 @@ mutation{
 
 
 
-<!-- ROADMAP -->
-## Roadmap
+<!-- ISSUES -->
+## Issues
 
-- [x] Add sections for the roadmap!
-- [x] And checkboxen!
-- [ ] Get creative with it!
-    - [ ] Or don't
-    - [ ] Your choice
+- Setup [ ]
+    - [ ] Create Database
+    - [ ] Configure for CORS
+    - [ ] Add GraphQL
+    - [ ] Setup Render
+    - [ ] Setup GitHub Action CI
+    - [ ] Setup Heroku
+
+- [ ] Mutations
+    - [ ] updateHousehold
+    - [ ] createChore
+    - [ ] createMember
+    - [ ] memberDelete
+    - [ ] updateChore
+    - [x] randomizeChores
+    
+- [ ] Refactor
+    - [ ] createChore
+    - [ ] memberDelete
+    
+- [ ] Happy Path Testing
+    - [x] getHousehold 
+    - [ ] 
+    
+- [ ] Sad Path Testing
+    - [ ] updateHousehold
+    - [x] getHousehold
+    - [ ] deleteMember
+    - [ ] createChore
+    - [ ] createMember
+    
+- [ ] Documentation
+    - [ ] ReadMe
+    - [ ] Update Postman server
+    
+- [ ] Deployment
 
 See the [open issues](https://github.com/to-do-guru/to-do-guru-api/issues) for a full list of proposed features (and known issues).
 

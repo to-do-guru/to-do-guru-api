@@ -8,27 +8,15 @@ class Mutations::CreateChore < Mutations::BaseMutation
   field :errors, [String], null: false
 
   def resolve(household_id:, name:, duration:, day:)
-    days = day
     created_chores = []
-    chore_errors = []
-    days.each do |day_of_week|
+    day.each do |day_of_week|
       chore = Chore.new(household_id:, name:, duration:, day: day_of_week)
-      if chore.save
-        created_chores << chore
-      else
-        chore_errors << chore.errors.full_messages
-      end
+      created_chores << chore if chore.save!
     end
-    if chore_errors.empty? && created_chores.empty? == false
-      {
-        chores: created_chores,
-        errors: []
-      }
-    else
-      {
-        chores: nil,
-        errors: chore_errors
-      }
-    end
+
+    {chores: created_chores, errors: []}
+
+  rescue => e
+    return { errors: [e] }
   end
 end

@@ -4,12 +4,12 @@ RSpec.describe "Mutation Create Chore" do
   let!(:household) { Household.create(name: "Test Household") }
   it "creates a chore by returning the chore" do
     input = <<~GQL
-    {
-      householdId: #{household.id}
-      name: "Fold Clothes"
-      duration: 30
-      day: ["Sunday", "Thursday"]
-    }
+      {
+        householdId: #{household.id}
+        name: "Fold Clothes"
+        duration: 30
+        day: ["Sunday", "Thursday"]
+      }
     GQL
 
     result = ToDoGuruApiSchema.execute(query(input))
@@ -21,12 +21,12 @@ RSpec.describe "Mutation Create Chore" do
 
   it "returns an error if a non-existent household ID is given" do
     input = <<~GQL
-    {
-      householdId: 0
-      name: "Dishes"
-      duration: 30
-      day: ["Sunday", "Thursday"]
-    }
+      {
+        householdId: 0
+        name: "Dishes"
+        duration: 30
+        day: ["Sunday", "Thursday"]
+      }
     GQL
 
     result = ToDoGuruApiSchema.execute(query(input))
@@ -36,12 +36,12 @@ RSpec.describe "Mutation Create Chore" do
 
   it "returns an error if chore name is not given" do
     input = <<~GQL
-    {
-      householdId: #{household.id}
-      name: ""
-      duration: 30
-      day: ["Sunday", "Thursday"]
-    }
+      {
+        householdId: #{household.id}
+        name: ""
+        duration: 30
+        day: ["Sunday", "Thursday"]
+      }
     GQL
 
     result = ToDoGuruApiSchema.execute(query(input))
@@ -51,12 +51,12 @@ RSpec.describe "Mutation Create Chore" do
 
   it "returns an error when the duration is not given" do
     input = <<~GQL
-    {
-      householdId: #{household.id}
-      name: "Dishes"
-      duration: null
-      day: ["Sunday", "Thursday"]
-    }
+      {
+        householdId: #{household.id}
+        name: "Dishes"
+        duration: null
+        day: ["Sunday", "Thursday"]
+      }
     GQL
 
     result = ToDoGuruApiSchema.execute(query(input))
@@ -66,12 +66,12 @@ RSpec.describe "Mutation Create Chore" do
 
   it "returns an error when the day is not given" do
     input = <<~GQL
-    {
-      householdId: #{household.id}
-      name: "Dishes"
-      duration: 30
-      day: null
-    }
+      {
+        householdId: #{household.id}
+        name: "Dishes"
+        duration: 30
+        day: null
+      }
     GQL
 
     result = ToDoGuruApiSchema.execute(query(input))
@@ -82,14 +82,14 @@ end
 
 def query(input)
   query = <<~GQL
-  mutation{
-    createChore(input:#{input})
-    {
-    chores{
-      choreName
-       }
-      errors
-      }
-   }
+    mutation{
+      createChore(input:#{input})
+      {
+      chores{
+        choreName
+         }
+        errors
+        }
+     }
   GQL
 end

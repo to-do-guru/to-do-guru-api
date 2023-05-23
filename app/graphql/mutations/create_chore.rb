@@ -14,9 +14,8 @@ class Mutations::CreateChore < Mutations::BaseMutation
       created_chores << chore if chore.save!
     end
 
-    {chores: created_chores, errors: []}
-
-  rescue => e
-    return { errors: [e] }
+    { chores: created_chores, errors: [] }
+  rescue StandardError => e
+    { errors: [e] }
   end
 end

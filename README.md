@@ -72,7 +72,7 @@
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#developers">Developers</a></li>
+    <li><a href="#contributors">Contributors</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -441,9 +441,6 @@ mutation {
 }
 ```
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -456,7 +453,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [x] And checkboxen!
 - [ ] Get creative with it!
     - [ ] Or don't
-    - [ ] You're choice
+    - [ ] Your choice
 
 See the [open issues](https://github.com/to-do-guru/to-do-guru-api/issues) for a full list of proposed features (and known issues).
 
@@ -491,80 +488,17 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 
-<!-- DEVELOPERS -->
+<!-- CONTRIBUTORS -->
 
-## Developers
+## Contributors
+<h2 id="contact">Contributors</h2>
 
-<div align="center">
-  <img src="https://avatars.githubusercontent.com/u/116456652?v=4" alt="Profile" width="80" height="80">
-  <p align="center">
-    Adam Bailey<br>
-  </p>
-  <p>
-  
-  [![GitHub][github-shield]][github-adam]
-  
-  [![LinkedIn][linkedin-shield]][linkedin-adam]
-  
-  </p>
-</div>
-
-
-<div align="center">
-  <img src="https://avatars.githubusercontent.com/u/71752551?v=4" alt="Profile" width="80" height="80">
-  <p align="center">
-    Brian Hayes<br>
-  </p>
-  <p>
-  
-  [![GitHub][github-shield]][github-brian]
-  
-  [![LinkedIn][linkedin-shield]][linkedin-brian]
-  
-  </p>
-</div>
-
-<div align="center">
-  <img src="https://avatars.githubusercontent.com/u/114951691?v=4" alt="Profile" width="80" height="80">
-  <p align="center">
-    Jasmine Hamou<br>
-  </p>
-  <p>
-  
-  [![GitHub][github-shield]][github-jasmine]
-  
-  [![LinkedIn][linkedin-shield]][linkedin-jasmine]
-  
-  </p>
-</div>
-
-<div align="center">
-  <img src="https://avatars.githubusercontent.com/u/112577589?v=4" alt="Profile" width="80" height="80">
-  <p align="center">
-    Meredith Trevino<br>
-  </p>
-  <p>
-  
-  [![GitHub][github-shield]][github-meredith]
-  
-  [![LinkedIn][linkedin-shield]][linkedin-meredith]
-  
-  </p>
-</div>
-
-<div align="center">
-  <img src="https://avatars.githubusercontent.com/u/108768349?v=4" alt="Profile" width="80" height="80">
-  <p align="center">
-    Max MacGillivray<br>
-  </p>
-  <p>
-  
-  [![GitHub][github-shield]][github-max]
-    
-  [![LinkedIn][linkedin-shield]][linkedin-max]
-  
-  </p>
-</div>
+| <img alt="Adam Bailey" width="75" src="https://avatars.githubusercontent.com/u/116456652?v=4"/> | <img alt="Jasmine Hamou" width="75" src="https://avatars.githubusercontent.com/u/114951691?v=4"/> | <img alt="Brian Hayes" width="75" src="https://avatars.githubusercontent.com/u/71752551?v=4"/> | <img alt="Meredith Trevino" width="75" src="https://avatars.githubusercontent.com/u/112577589?v=4"/> | <img alt="Max MacGillivray" width="75" src="https://avatars.githubusercontent.com/u/108768349?v=4"/> | <img alt="Khoa Nguyen" width="75" src="https://media.licdn.com/dms/image/C4E03AQHMrMCsQolblQ/profile-displayphoto-shrink_800_800/0/1620508068267?e=1690416000&v=beta&t=Ej9xKJpBKJ214TQX88tBrHvU7Ew8aciWZRvT8KMWhZA"/> |
+| ------------------ | ------------ | -------------- | ----------- | -------------- | ----------- |
+| Adam Bailey | Jasmine Hamou | Brian Hayes | Meredith Trevino | Max MacGillivray | Khoa Nguyen |
+| Collaborator | Collaborator | Collaborator | Collaborator | Collaborator | Project Manager |
+| [![GitHub][github-shield]][github-adam] | [![GitHub][github-shield]][github-jasmine] | [![GitHub][github-shield]][github-brian] | [![GitHub][github-shield]][github-meredith] | [![GitHub][github-shield]][github-max] | [![GitHub][github-shield]][github-khoa] |
+| [![LinkedIn][linkedin-shield]][linkedin-adam] |  [![LinkedIn][linkedin-shield]][linkedin-jasmine] | [![LinkedIn][linkedin-shield]][linkedin-brian] | [![LinkedIn][linkedin-shield]][linkedin-meredith] | [![LinkedIn][linkedin-shield]][linkedin-max] | [![LinkedIn][linkedin-shield]][linkedin-khoa] |
 
 
 Project Links: <br> 
@@ -620,6 +554,7 @@ Use this space to list resources you find helpful and would like to give credit 
 [linkedin-jasmine]: https://www.linkedin.com/in/jasmine-hamou/
 [linkedin-meredith]: https://www.linkedin.com/in/meredith-trevino/
 [linkedin-max]: https://www.linkedin.com/in/max-macgillivray/
+[linkedin-khoa]: https://www.linkedin.com/in/khoa-nguyen-1770918b/
 
 [product-screenshot]: images/screenshot.png
 

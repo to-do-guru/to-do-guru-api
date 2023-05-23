@@ -22,21 +22,6 @@ RSpec.describe "Mutation Create Chore" do
   it "returns an error if a non-existent household ID is given" do
     input = <<~GQL
     {
-      householdId: #{household.id}
-      name: ""
-      duration: 30
-      day: ["Sunday", "Thursday"]
-    }
-    GQL
-
-    result = ToDoGuruApiSchema.execute(query(input))
-
-    expect(result.dig("data", "createChore", "errors").first).to eq("[\"Name can't be blank\"]")
-  end
-
-  it "returns an error if chore name is not given" do
-    input = <<~GQL
-    {
       householdId: 0
       name: "Dishes"
       duration: 30
@@ -46,7 +31,22 @@ RSpec.describe "Mutation Create Chore" do
 
     result = ToDoGuruApiSchema.execute(query(input))
 
-    expect(result.dig("data", "createChore", "errors").first).to eq("[\"Household must exist\"]")
+    expect(result.dig("data", "createChore", "errors").first).to eq("Validation failed: Household must exist")
+  end
+
+  it "returns an error if chore name is not given" do
+    input = <<~GQL
+    {
+      householdId: #{household.id}
+      name: ""
+      duration: 30
+      day: ["Sunday", "Thursday"]
+    }
+    GQL
+
+    result = ToDoGuruApiSchema.execute(query(input))
+
+    expect(result.dig("data", "createChore", "errors").first).to eq("Validation failed: Name can't be blank")
   end
 
   it "returns an error when the duration is not given" do

@@ -149,6 +149,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 <!-- SCHEMA -->
 ## Schema
 
+![to-do-guru-db (4)](https://github.com/to-do-guru/to-do-guru-api/assets/108768349/6cbe73fb-850e-4d45-87e8-fc3217a9fe11)
 
 <!-- SCHEMA GOES HERE -->
 

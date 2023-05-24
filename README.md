@@ -32,7 +32,8 @@
 
   <h3 align="center">To Do Guru</h3>
   
-      <!-- LOGO GOES HERE -->
+  ![logo-green](https://github.com/to-do-guru/to-do-guru-api/assets/108768349/d6091c8a-c1c6-47db-beaa-ca09923b0252)
+
 
   <p align="center">
     <br />
@@ -76,7 +77,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<!-- WELCOME SCREENSHOT GOES HERE -->
+![welcome](https://github.com/to-do-guru/to-do-guru-api/assets/108768349/f2e27c52-a2a6-4022-b5ef-bd21ad9655c1)
+
 
 Have you ever felt like your household chores aren't divided evenly? 
 

@@ -533,7 +533,7 @@ mutation{
 
 See the [open issues](https://github.com/to-do-guru/to-do-guru-api/issues) for a full list of proposed features (and known issues).
 
-- [x] Setup 
+<!-- - [x] Setup 
     - [x] Create Database
     - [x] Configure for CORS
     - [x] Add GraphQL
@@ -575,7 +575,7 @@ See the [open issues](https://github.com/to-do-guru/to-do-guru-api/issues) for a
     - [ ] ReadMe
     - [x] Update Postman server
     
-- [ ] Deployment
+- [ ] Deployment -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -530,20 +530,16 @@ mutation{
 
 <!-- ISSUES -->
 ## Issues
-<details>
-<summary> 
+
+See the [open issues](https://github.com/to-do-guru/to-do-guru-api/issues) for a full list of proposed features (and known issues).
 
 - [x] Setup 
-
-</summary>
-
     - [x] Create Database
     - [x] Configure for CORS
     - [x] Add GraphQL
     - [x] Setup Render
     - [x] Setup GitHub Action CI
     - [x] Setup Heroku
-    </details>
 
 - [ ] Mutations
     - [x] updateHousehold
@@ -580,8 +576,6 @@ mutation{
     - [x] Update Postman server
     
 - [ ] Deployment
-
-See the [open issues](https://github.com/to-do-guru/to-do-guru-api/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

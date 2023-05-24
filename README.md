@@ -477,19 +477,19 @@ mutation{
 <!-- ISSUES -->
 ## Issues
 
-- Setup [ ]
-    - [ ] Create Database
-    - [ ] Configure for CORS
-    - [ ] Add GraphQL
-    - [ ] Setup Render
-    - [ ] Setup GitHub Action CI
-    - [ ] Setup Heroku
+- [x] Setup
+    - [x] Create Database
+    - [x] Configure for CORS
+    - [x] Add GraphQL
+    - [x] Setup Render
+    - [x] Setup GitHub Action CI
+    - [x] Setup Heroku
 
 - [ ] Mutations
-    - [ ] updateHousehold
-    - [ ] createChore
-    - [ ] createMember
-    - [ ] memberDelete
+    - [x] updateHousehold
+    - [x] createChore
+    - [x] createMember
+    - [x] memberDelete
     - [ ] updateChore
     - [x] randomizeChores
     
@@ -498,19 +498,26 @@ mutation{
     - [ ] memberDelete
     
 - [ ] Happy Path Testing
-    - [x] getHousehold 
-    - [ ] 
+    - [x] getHousehold
+    - [x] updateHousehold
+    - [x] createChore
+    - [x] createMember
+    - [x] memberDelete
+    - [x] updateChore
+    - [x] randomizeChores
     
 - [ ] Sad Path Testing
-    - [ ] updateHousehold
     - [x] getHousehold
-    - [ ] deleteMember
+    - [ ] updateHousehold
     - [ ] createChore
     - [ ] createMember
+    - [x] memberDelete
+    - [ ] updateChore
+    - [ ] randomizeChores
     
 - [ ] Documentation
     - [ ] ReadMe
-    - [ ] Update Postman server
+    - [x] Update Postman server
     
 - [ ] Deployment
 

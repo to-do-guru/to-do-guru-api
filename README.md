@@ -66,6 +66,7 @@
     <li><a href="#api contract">API Contract</a></li>
     <li><a href="#schema">Schema</a></li>
     <li><a href="#issues">Issues</a></li>
+    <li><a href="#postman">Postman</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contributors">Contributors</a></li>
@@ -151,11 +152,12 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 ![to-do-guru-db (4)](https://github.com/to-do-guru/to-do-guru-api/assets/108768349/6cbe73fb-850e-4d45-87e8-fc3217a9fe11)
 
-<!-- SCHEMA GOES HERE -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## getHousehold Query
+<!-- REQUESTSS -->
+## Requests
+### getHousehold Query
 
 Receives the request for a specified household and returns the household information.
 
@@ -307,7 +309,9 @@ query getHousehold($email: String!) {
 
 </details>
 
-## updateHousehold Mutation
+---
+
+### updateHousehold Mutation
 
 Updates the information about a household
 
@@ -352,7 +356,9 @@ mutation {
 
 </details>
 
-## createMember Mutation
+---
+
+### createMember Mutation
 
 Adds a member to a household
 
@@ -395,7 +401,9 @@ mutation {
 
 </details>
 
-## memberDelete Mutation
+---
+
+### memberDelete Mutation
 
 Deletes a member of the household
 
@@ -436,7 +444,9 @@ mutation {
 
 </details>
 
-## createChore Mutation
+---
+
+### createChore Mutation
 
 Creates a chore
 
@@ -485,7 +495,9 @@ mutation {
 
 </details>
 
-## randomizeChores Mutation
+---
+
+### randomizeChores Mutation
 
 Randomly assigns chores to members
 
@@ -527,56 +539,22 @@ mutation{
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- POSTMAN -->
+## Postman Queries
+
+Postman testing is available here, use this button to fork the test repository.
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/26085409-87fef94c-9c3d-48c6-869a-c4dc39aa5b54?action=collection%2Ffork&collection-url=entityId%3D26085409-87fef94c-9c3d-48c6-869a-c4dc39aa5b54%26entityType%3Dcollection%26workspaceId%3D896601f2-ed15-4dac-8b08-484cb6392127)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 <!-- ISSUES -->
 ## Issues
 
-See the [open issues](https://github.com/to-do-guru/to-do-guru-api/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/to-do-guru/to-do-guru-api/issues) for a full list of proposed features and known issues).
 
-<!-- - [x] Setup 
-    - [x] Create Database
-    - [x] Configure for CORS
-    - [x] Add GraphQL
-    - [x] Setup Render
-    - [x] Setup GitHub Action CI
-    - [x] Setup Heroku
-
-- [ ] Mutations
-    - [x] updateHousehold
-    - [x] createChore
-    - [x] createMember
-    - [x] memberDelete
-    - [ ] updateChore
-    - [x] randomizeChores
-    
-- [ ] Refactor
-    - [ ] createChore
-    - [ ] memberDelete
-    
-- [ ] Happy Path Testing
-    - [x] getHousehold
-    - [x] updateHousehold
-    - [x] createChore
-    - [x] createMember
-    - [x] memberDelete
-    - [x] updateChore
-    - [x] randomizeChores
-    
-- [ ] Sad Path Testing
-    - [x] getHousehold
-    - [ ] updateHousehold
-    - [ ] createChore
-    - [ ] createMember
-    - [x] memberDelete
-    - [ ] updateChore
-    - [ ] randomizeChores
-    
-- [ ] Documentation
-    - [ ] ReadMe
-    - [x] Update Postman server
-    
-- [ ] Deployment -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -636,9 +614,6 @@ Project Links: <br>
 ## Acknowledgments
 
 These are some of the resources we used for the project and the README.
-
-#### Project Resources
-* 
 
 #### ReadMe Resources
 * [README Template](https://github.com/othneildrew/Best-README-Template)

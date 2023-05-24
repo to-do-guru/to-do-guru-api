@@ -32,7 +32,8 @@
 
   <h3 align="center">To Do Guru</h3>
   
-      <!-- LOGO GOES HERE -->
+  ![logo-green](https://github.com/to-do-guru/to-do-guru-api/assets/108768349/d6091c8a-c1c6-47db-beaa-ca09923b0252)
+
 
   <p align="center">
     <br />
@@ -62,8 +63,9 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">API Contract</a></li>
-    <li><a href="#roadmap">Issues</a></li>
+    <li><a href="#api contract">API Contract</a></li>
+    <li><a href="#schema">Schema</a></li>
+    <li><a href="#issues">Issues</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contributors">Contributors</a></li>
@@ -76,7 +78,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<!-- WELCOME SCREENSHOT GOES HERE -->
+![welcome](https://github.com/to-do-guru/to-do-guru-api/assets/108768349/f2e27c52-a2a6-4022-b5ef-bd21ad9655c1)
+
 
 Have you ever felt like your household chores aren't divided evenly? 
 
@@ -143,13 +146,24 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 <!-- add a try it now section with the FE SITE? -->
 
+<!-- SCHEMA -->
+## Schema
+
+
+<!-- SCHEMA GOES HERE -->
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## getHousehold Query
 
-* Receives the request for a specified household and returns the household information.
+Receives the request for a specified household and returns the household information.
+
+
+<details>
+  <summary>Request, GraphQL Variable, and Response</summary>
 
 **Request**
-
-```sh
+```
 query getHousehold($email: String!) {
     household (email: $email) {
         id
@@ -290,11 +304,18 @@ query getHousehold($email: String!) {
 }
 ```
 
+</details>
+
 ## updateHousehold Mutation
 
-* Updates the information about a household
+Updates the information about a household
+
+
+<details>
+  <summary>Request and Response </summary>
 
 **Request**
+
 ```
 mutation {
   updateHousehold(input: {
@@ -312,6 +333,7 @@ mutation {
  ```
  
  **Response**
+   
  ```
  {
     "data": {
@@ -327,11 +349,17 @@ mutation {
 }
 ```
 
+</details>
+
 ## createMember Mutation
 
-* Adds a member to a household
+Adds a member to a household
+
+<details>
+  <summary>Request and Response </summary>
 
 **Request**
+  
 ```
 mutation {
   createMember(input: {
@@ -349,6 +377,7 @@ mutation {
 ```
 
 **Response**
+  
 ```
 {
     "data": {
@@ -363,11 +392,18 @@ mutation {
 }
 ```
 
+</details>
+
 ## memberDelete Mutation
 
-* Deletes a member of the household
+Deletes a member of the household
+
+
+<details>
+  <summary>Request and Response</summary>
 
 **Request**
+  
 ```
 mutation {
     memberDelete(input: {
@@ -383,6 +419,7 @@ mutation {
 ```
 
 **Response**
+
 ```
 {
     "data": {
@@ -396,11 +433,18 @@ mutation {
 }
 ```
 
+</details>
+
 ## createChore Mutation
 
-* Creates a chore
+Creates a chore
+
+
+<details>
+  <summary>Request and Response </summary>
 
 **Request**
+
 ```
 mutation {
   createChore(input: {
@@ -419,6 +463,7 @@ mutation {
 ```
 
 **Response**
+  
 ```
 {
     "data": {
@@ -437,11 +482,17 @@ mutation {
 }
 ```
 
+</details>
+
 ## randomizeChores Mutation
 
-* Randomly assigns chores to members
+Randomly assigns chores to members
+
+<details>
+  <summary>Request and Response </summary>
 
 **Request**
+  
 ```
 mutation{
     randomizeChores(input:{
@@ -457,6 +508,7 @@ mutation{
 ```
 
 **Response**
+  
 ```
 {
     "data": {
@@ -470,20 +522,28 @@ mutation{
 }
 ```
 
+</details>
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- ISSUES -->
 ## Issues
+<details>
+<summary> 
 
-- [x] Setup
+- [x] Setup 
+
+</summary>
+
     - [x] Create Database
     - [x] Configure for CORS
     - [x] Add GraphQL
     - [x] Setup Render
     - [x] Setup GitHub Action CI
     - [x] Setup Heroku
+    </details>
 
 - [ ] Mutations
     - [x] updateHousehold
